@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+	<title>angularjs的MVC搭建</title>
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/myctrl.js"></script>
+
+</head>
+<body ng-app="app">
+	<div ng-controller="myctrl">
+		<input type="text" ng-model="msg"/>
+		<!--使用ng-bind不需要将变量使用大括号包裹-->
+		<!--也可以使用{{msg}}的方式进行显示-->
+		<h1 ng-bind='msg'></h1>
+	</div>
+	<div ng-controller='NextCtrl'>
+		<input type="text" ng-model="msg">
+		<h1 ng-bind='msg'></h1> 
+	</div>
+	<div ng-controller='MyCtrl'>
+		<input type="text" ng-model="msg">
+		<h1 >{{reverse()}}</h1> 
+	</div>
+</body>
+</html>
